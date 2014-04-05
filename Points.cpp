@@ -217,7 +217,8 @@ bool Points::getGlobalHighScore()
 		return false;
 	}
 	// Connect to the database
-	if( mysql_real_connect(conn, "db4free.net", "agreon", "pokemon10", "defendhighscore", 3306, NULL, 0) == NULL )
+	/* Deleted data for you ;) */
+	if( mysql_real_connect(conn, "", "", "", "", 3306, NULL, 0) == NULL )
 	{
 		(*Log) << mysql_error(conn);
 		return false;
